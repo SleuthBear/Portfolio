@@ -47,8 +47,8 @@ body {
   }
   
   .intro {
-    background: url('https://via.placeholder.com/1200x400') no-repeat center/cover;
-    color: #fff;
+    background: no-repeat center/cover;
+    color: #000000;
     text-align: center;
     padding: 5rem 1rem;
   }
@@ -72,18 +72,24 @@ body {
   
   .project-grid {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between the grid items */
+    padding: 20px; /* Optional padding around the grid */
   }
   
   .project-card {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    background-color: #f9f9f9; /* Light background for each card */
+    padding: 20px;
     border: 1px solid #ddd;
-    text-align: center;
-  }
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
   
+    text-align: center; /* Centers text horizontally */
+    display: flex; /* Enables flexbox for vertical alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+  }
   .project-card h3 {
     margin-top: 0;
   }
@@ -114,3 +120,39 @@ body {
     background: #333;
     color: #fff;
   }
+
+  .image-gallery {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 1rem; /* Add spacing between images */
+    align-items: center; /* Center images horizontally */
+    margin-top: 1rem;
+  }
+  
+  .image-gallery img {
+    max-width: 80%; /* Adjust the width of the images (e.g., 80% of the container) */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .image-gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+
+.gif-container {
+  width: 90%; /* Allow it to take 90% of the card's width */
+  max-width: 800px; /* Limit the width to prevent overflow */
+  margin: 1rem auto; /* Center the container */
+  text-align: center;
+}
+
+.gif-container img {
+  max-width: 100%; /* Ensure the GIF scales properly within the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
